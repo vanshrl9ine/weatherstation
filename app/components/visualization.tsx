@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
@@ -6,8 +6,8 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 interface VisualizationProps {
-  labels: string[];
-  data: number[];
+  labels: string[]; // Accept labels
+  data: number[]; // Accept data
 }
 
 const Visualization: React.FC<VisualizationProps> = ({ labels, data }) => {

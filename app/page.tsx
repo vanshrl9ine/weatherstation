@@ -40,7 +40,7 @@ const HomePage = () => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 5 * 60 *1000); // Fetch every 5 minutes
+    const interval = setInterval(fetchData, 5 * 60 * 1000); // Fetch every 5 minutes
 
     return () => clearInterval(interval);
   }, []);
@@ -51,7 +51,7 @@ const HomePage = () => {
 
       {weatherData && <WeatherSummary data={{ ...weatherData, ...dailyData }} />}
       {weatherData && <Alert temp={weatherData.temp} threshold={alertThreshold} />}
-      <Visualization labels={labels} data={temperatures} />
+      {weatherData && <Visualization labels={labels} data={temperatures} />} {/* Pass labels and temperatures here */}
     </div>
   );
 };
