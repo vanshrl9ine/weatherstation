@@ -40,7 +40,7 @@ const HomePage = () => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 5 * 60 * 1000); // Fetch every 5 minutes
+    const interval = setInterval(fetchData, 1 * 60 * 1000); // Fetch every 1 minutes+github action
 
     return () => clearInterval(interval);
   }, []);
