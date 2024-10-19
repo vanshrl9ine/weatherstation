@@ -17,4 +17,4 @@ jobs:
     # Step 2: Make an HTTP request to your Vercel API endpoint
     - name: Fetch weather data
       run: |
-        curl -X GET "https://your-vercel-app.vercel.app/api/weather?city=Delhi"
+        curl -X GET "https://weatherstation-six.vercel.app/api/weather?city=Delhi"
